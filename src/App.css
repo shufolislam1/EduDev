@@ -39,3 +39,68 @@
 .read-the-docs {
   color: #888;
 }
+body {
+  align-items: center;
+  background: none;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+:root {
+  --no-of-slides: 6;
+  --slides-in-view: 4;
+  --slide-width: 200px;
+  --slide-height: 300px;
+  --iteration-time: 10s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1));
+  }
+}
+
+.slider {
+  background: none;
+  box-shadow:none;
+  height: 80vh;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1200px;
+}
+
+.slider::before,
+.slider::after {
+  background: none;
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}

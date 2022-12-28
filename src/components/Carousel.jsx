@@ -2,7 +2,7 @@ import React from 'react';
 
 const Carousel = () => {
     return (
-        <div className='mt-8'>
+        <div className='mt-8 pb-28'>
             <div class="slider">
                 <div class="slide-track">
                     <div class="slide">

@@ -3,8 +3,7 @@ import React from 'react';
 const Register = () => {
     return (
         <div>
-            <div className='mb-16'>
-
+            <div className=''>
                 <form>
                     <div class="mb-6">
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>

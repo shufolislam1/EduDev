@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = () => {
     return (
-        <div className='mb-16'>
+        <div className=''>
 
             <form>
                 <div class="mb-6">
